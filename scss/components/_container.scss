@@ -1,0 +1,25 @@
+/**
+ * components/container
+ * ====================
+ */
+
+.container{
+    // background-color: $color-white;
+
+    &--dark{
+        background-color: $color-dark-blue;
+    }
+    
+    &__inner{
+        max-width: $content-max-width;
+        margin: 0 auto;
+
+        @include bp($md){
+            padding:0;
+        }
+        @include bp($lg){
+            padding:0;
+        }
+    }
+
+}

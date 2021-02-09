@@ -1,0 +1,37 @@
+/**
+ * components/hero
+ * ===============
+ */
+
+.hero{
+  
+  &__image{
+
+  }
+  &__content{
+    
+  }
+  &__title{
+    font-size: $font-size-5xl;
+    line-height: $line-height-5xl;
+  }
+  &__copy{
+    margin-top: $content-space-0;
+    font-size: $font-size-5xl;
+    line-height: $line-height-5xl;
+  }
+  &__cta-btn{
+    margin-top: $content-space-0;
+    font-size: $font-size-5xl;
+    line-height: $line-height-5xl;}
+}
+
+@include bp($md){
+  
+
+}
+
+@include bp($lg){
+  
+
+}

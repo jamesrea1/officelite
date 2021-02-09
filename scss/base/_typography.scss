@@ -1,0 +1,45 @@
+/**
+ * base/typography
+ * ===============
+ */
+
+
+// html{
+//     // font-size: 62.5%;
+// }
+body{
+    font-family: $font-family-base;   
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    font-weight: 400;
+    color: $color-gray;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+    color: $color-dark;
+    font-weight: 400;
+    letter-spacing: $letter-spacing-sm;
+}
+h1{
+    font-size: $font-size-5xl;
+    line-height: $line-height-5xl;
+}
+h2{
+    font-size: $font-size-4xl;
+    line-height: $line-height-4xl;
+}
+h3{
+    font-size: $font-size-xl;
+    line-height: $line-height-xl;
+}
+h4{
+    font-size: $font-size-lg;
+    line-height: $line-height-lg;
+}

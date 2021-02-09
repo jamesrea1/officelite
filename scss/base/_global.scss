@@ -1,0 +1,28 @@
+/**
+ * base/global
+ * ===========
+ */
+
+
+body{
+    min-width: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: $color-light;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    background:none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    outline:none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+

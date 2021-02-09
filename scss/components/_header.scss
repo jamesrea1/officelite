@@ -1,0 +1,29 @@
+/**
+ * components/header
+ * =================
+ */
+
+.header{
+    padding: 0; 
+    height: auto;
+
+    &__logo{
+        width: 155px;
+        height: 30px; 
+    }
+
+}
+
+@include bp($md){
+    .header{
+        padding: 0;
+        height: auto;      
+    }
+}
+
+@include bp($lg){
+    .header{
+        padding: 0;
+        height: auto;      
+    }
+}

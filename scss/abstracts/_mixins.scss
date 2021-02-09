@@ -1,0 +1,26 @@
+/**
+ * abstracts/mixins
+ * ================
+ */
+
+
+@mixin d-border($color: red){
+   border: 1px solid $color;
+}
+
+@mixin d-bg($color: gray){
+   background-color: $color;
+}
+
+
+@mixin bp($device-width) {
+  @media (min-width:$device-width) {
+    @content 
+  }
+}
+
+@mixin bp-max($device-width) {
+  @media (max-width: $device-width - 1) {
+    @content 
+  }
+}

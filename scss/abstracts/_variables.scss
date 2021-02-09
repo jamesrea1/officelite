@@ -1,0 +1,97 @@
+/**
+ * abstracts/variables
+ * ===================
+ */
+
+
+// Content size variables
+$content-max-width: 1120px;
+
+
+// Colour variables
+$color-white: #FFFFFF;
+$color-light: #FAFAFA;
+$color-dark: #25293a;
+$color-gray: #747b95;
+$color-brand-blue: #5175ff;
+$color-pale-blue: #e4eaff;
+$color-dark-blue: #333950;
+
+
+// Font family variables
+$font-family-base: 'Kumbh Sans', sans-serif;;
+$font-family-secondary: serif;
+
+
+// Font size variables
+$font-size-xxs:     pxToRem(1);
+$line-height-xxs:   pxToRem(1);
+
+$font-size-xs:      pxToRem(12);
+$line-height-xs:    pxToRem(20);
+
+$font-size-sm:      pxToRem(14);
+$line-height-sm:    pxToRem(22);
+
+$font-size-base:    pxToRem(16);
+$line-height-base:  pxToRem(26);
+
+$font-size-lg:      pxToRem(18);
+$line-height-lg:    pxToRem(28);
+
+$font-size-xl:      pxToRem(20);
+$line-height-xl:    pxToRem(30);
+
+$font-size-2xl:     pxToRem(24);
+$line-height-2xl:   pxToRem(32);
+
+$font-size-3xl:     pxToRem(28); 
+$line-height-3xl:   pxToRem(36);
+
+$font-size-4xl:     pxToRem(32); 
+$line-height-4xl:   pxToRem(40);
+
+$font-size-5xl:     pxToRem(40); 
+$line-height-5xl:   pxToRem(48);
+
+$font-size-6xl:     pxToRem(48);
+$line-height-6xl:   pxToRem(56);
+
+$font-size-7xl:     pxToRem(56);
+$line-height-7xl:   pxToRem(64);
+
+// $font-size-8xl: 6rem;
+// $line-height-8xl: 1;
+
+// $font-size-9xl: 8rem;
+// $line-height-9xl: 1;
+
+
+// Letter spacing variables
+$letter-spacing-xs: -0.1em;
+$letter-spacing-sm: -0.05em;
+$letter-spacing-base: 0;
+$letter-spacing-lg: 0.1em;
+
+
+// Spacing variables
+$paragraph-space-sm: 1em; //pxToRem(56);
+$paragraph-space-md: 2em; //pxToRem(56);
+$paragraph-space-lg: 3em; //pxToRem(56);
+
+
+// Content padding variables
+$content-space-0:   pxToRem(0);
+$content-space-16:  pxToRem(16);
+$content-space-24:  pxToRem(24);
+$content-space-32:  pxToRem(32);
+$content-space-40:  pxToRem(40);
+$content-space-48:  pxToRem(48);
+$content-space-56:  pxToRem(56);
+$content-space-80:  pxToRem(80);
+$content-space-100: pxToRem(100);
+
+
+
+
+
