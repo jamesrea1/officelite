@@ -8,7 +8,10 @@ body{
     min-width: 200px;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: $color-light;
+    background: $color-light 
+                no-repeat 
+                url(../../assets/home/bg-pattern-header.svg) 
+                50% -170px / 450px;
 }
 
 button {

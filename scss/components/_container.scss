@@ -13,6 +13,8 @@
     &__inner{
         max-width: $content-max-width;
         margin: 0 auto;
+        padding: 0 7% 0;
+
 
         @include bp($md){
             padding:0;

@@ -10,7 +10,7 @@
 body{
     font-family: $font-family-base;   
     font-size: $font-size-base;
-    line-height: $line-height-base;
+    line-height: 1.5; //$line-height-base;
     font-weight: 400;
     color: $color-gray;
 }
@@ -23,9 +23,9 @@ p{
 h1,h2,h3,h4,h5,h6{
     margin: 0;
     padding: 0;
-    color: $color-dark;
+    color: $color-dark-blue;
     font-weight: 400;
-    letter-spacing: $letter-spacing-sm;
+    //letter-spacing: $letter-spacing-sm;
 }
 h1{
     font-size: $font-size-5xl;

@@ -4,26 +4,31 @@
  */
 
 .hero{
-  
-  &__image{
+  text-align: center;
 
+  &__image{
+    width:200px;
+    margin:0 auto;
+    margin-top: $content-space-32;
   }
   &__content{
-    
+    margin-top: $content-space-32;
   }
   &__title{
     font-size: $font-size-5xl;
     line-height: $line-height-5xl;
+    font-weight: bold;
+    color: $color-dark;
+    letter-spacing: 0; //$letter-spacing-lg;
   }
   &__copy{
-    margin-top: $content-space-0;
-    font-size: $font-size-5xl;
-    line-height: $line-height-5xl;
+    margin-top: $content-space-24;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
   }
   &__cta-btn{
-    margin-top: $content-space-0;
-    font-size: $font-size-5xl;
-    line-height: $line-height-5xl;}
+    margin-top: $content-space-24;
+  }
 }
 
 @include bp($md){

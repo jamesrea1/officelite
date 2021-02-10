@@ -1,0 +1,50 @@
+ /**
+ * components/plan-card
+ * ====================
+ */
+
+ .plan-card{
+    background-color:#FFF;
+    border-radius: 0.8rem; 
+    box-shadow: 0 2rem 2rem -1rem rgba(73, 85, 136, 0.22);
+    padding: $content-space-40 $content-space-32;
+    margin: 50px 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &__type{
+        margin-top: 0;
+        font-size: $font-size-xl;
+        font-weight: bold;
+        color: $color-dark-blue;
+    }
+    &__price{
+        margin-top: $content-space-16;
+        font-size: $font-size-7xl;
+        font-weight: bold;
+        color: $color-dark-blue;
+    }
+    &__description{
+        margin-top: 0;
+        font-size: $font-size-base;
+        font-weight: normal;
+        color: $color-dark-blue;
+    }
+    &__features{
+        margin-top: $content-space-40;
+        
+        p{
+            margin-top: $content-space-16;
+            font-size: $font-size-base;
+            font-weight: normal;
+            color: $color-gray;
+            text-align: center;
+        }
+    }
+    &__cta{
+        margin-top: $content-space-32;
+    }
+
+}

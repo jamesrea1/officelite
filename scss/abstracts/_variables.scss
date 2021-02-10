@@ -75,9 +75,9 @@ $letter-spacing-lg: 0.1em;
 
 
 // Spacing variables
-$paragraph-space-sm: 1em; //pxToRem(56);
-$paragraph-space-md: 2em; //pxToRem(56);
-$paragraph-space-lg: 3em; //pxToRem(56);
+$paragraph-space-sm: pxToRem(4);
+$paragraph-space-md: pxToRem(8);
+$paragraph-space-lg: pxToRem(12);
 
 
 // Content padding variables

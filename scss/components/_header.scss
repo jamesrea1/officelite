@@ -4,12 +4,13 @@
  */
 
 .header{
-    padding: 0; 
+    padding: $content-space-40 0; 
     height: auto;
 
     &__logo{
         width: 155px;
         height: 30px; 
+        margin:0 auto;
     }
 
 }
