@@ -1,19 +1,18 @@
- /**
- * components/plan-card
- * ====================
- */
+// 
+// components/plan-card
+// ====================
+// 
 
- .plan-card{
-    background-color:#FFF;
-    border-radius: 0.8rem; 
-    box-shadow: 0 2rem 2rem -1rem rgba(73, 85, 136, 0.22);
+.plan-card{
     padding: $content-space-40 $content-space-32;
-    margin: 50px 0;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
+    background-color:#FFF;
+    border-radius: 0.8rem; 
+    box-shadow: 0 2rem 2rem -1rem rgba(73, 85, 136, 0.22);
+    
     &__type{
         margin-top: 0;
         font-size: $font-size-xl;
@@ -47,4 +46,17 @@
         margin-top: $content-space-32;
     }
 
+    &--featured{
+        background: $color-brand-blue 
+                    no-repeat 
+                    url(../../assets/home/bg-pattern-pricing.svg) 
+                    50% 100%;
+
+        & .plan-card__type, & .plan-card__price, & .plan-card__description{
+            color: $color-white;
+        }
+        & .plan-card__features p{
+            color: $color-light-blue;
+        }
+    }
 }

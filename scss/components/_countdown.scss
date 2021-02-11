@@ -1,0 +1,54 @@
+// 
+// components/countdown
+// ====================
+// 
+
+.countdown{
+
+
+    &__title{
+        font-size: $font-size-base;
+        font-weight: bold;
+        letter-spacing: $letter-spacing-4xl;
+        text-transform: capitalize;
+        color: $color-white;
+        
+        span{
+            letter-spacing: $letter-spacing-4xl;
+            color: $color-brand-blue;
+        }
+    }
+    &__timer{
+        max-width: pxToRem(320);
+        margin: 0 auto;
+        margin-top: $content-space-32;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        //grid-template-columns: repeat(4, calc(25% - (36px/4)));
+        gap: 3%;
+    }
+    &__timer-card{
+        padding: $content-space-20 $content-space-0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: $content-space-4;
+        background-color: $color-dark-blue;
+    }
+    &__timer-value{
+        font-size: $font-size-4xl;
+        font-weight: bold;
+        line-height: 1;
+        color: $color-white;
+    }
+    &__timer-unit{
+        margin-top: pxToRem(8);
+        font-size: $font-size-xs;
+        font-weight: bold;
+        line-height: 1;
+        color: $color-gray;
+    }
+
+
+ }

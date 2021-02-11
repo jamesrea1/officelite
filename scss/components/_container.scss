@@ -5,15 +5,41 @@
 
 .container{
     // background-color: $color-white;
+    position: relative;
 
     &--dark{
-        background-color: $color-dark-blue;
+        background-color: $color-dark;
     }
     
+    &--plans{
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 50%;
+            background-color: $color-light;
+            z-index: 1;
+
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $color-dark;
+            z-index: -1;
+        }
+    }
+
     &__inner{
         max-width: $content-max-width;
         margin: 0 auto;
-        padding: 0 7% 0;
+        padding-left: 7%;
+        padding-right: 7%;
 
 
         @include bp($md){

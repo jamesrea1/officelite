@@ -1,31 +1,63 @@
-/**
- * components/cta-btn
- * ==================
- */
+// 
+// components/cta-btn
+// ==================
+// 
 
- .cta-btn{
+.cta-btn{
     $radius: 2rem;
-    
+    @mixin dropShadow($opacity){
+        box-shadow: 0 1.2rem 1.5rem -0.5rem rgba(#1a36a7, $opacity);
+    }
+
     display: inline-block;
-    padding: 1rem 2.5rem;
+    padding: 1em 2.5em;
     border-radius: $radius;
     background-color: $color-brand-blue;
-    box-shadow: 0 1.2rem 1.5rem -0.5rem rgba(#1a36a7, 0.3);
     font-size: $font-size-base;
-    line-height: 1.5em;
+    line-height: 1.5;
     font-weight: bold;
     color: $color-white;
     text-decoration: none;
-    transition: opacity 0.3s;
+    transition: box-shadow 0.3s, background-color 0.3s;
 
+    &--shadow{
+        @include dropShadow(0.3);
+    }
+    
     &:hover {
-        opacity: 0.8;
+        background-color: lighten($color-brand-blue, 5);
+    }
+    &:focus{
+        box-shadow: 0 0 0 5px lighten($color-brand-blue, 20);
+        outline: none;
     }
 
-    &:focus{
-        outline:none;
-        box-shadow: 0 0 0 5px rgba($color-brand-blue, .3);
+    &--pale{
+        background-color: $color-very-light-blue;
+        color: $color-brand-blue;
+
+        &:hover {
+            background-color: darken($color-very-light-blue, 5);
+            color: darken($color-brand-blue, 5);
+        }
+        &:focus{
+            box-shadow: 0 0 0 5px darken($color-very-light-blue, 25 );
+        }
     }
+    &--white{
+        background-color: $color-white;
+        color: $color-brand-blue;
+    
+        &:hover {
+            background-color: $color-very-light-blue;
+            color: darken($color-brand-blue, 5);
+        }
+        &:focus{
+            box-shadow: 0 0 0 1px darken($color-brand-blue, 1)
+            ,0 0 0 6px lighten($color-brand-blue, 15); 
+        }
+    }
+
 
 
 }

@@ -1,10 +1,10 @@
-/**
- * components/header
- * =================
- */
+// 
+// components/header
+// =================
+// 
 
 .header{
-    padding: $content-space-40 0; 
+    padding: $content-space-40 $content-space-0; 
     height: auto;
 
     &__logo{
@@ -12,7 +12,6 @@
         height: 30px; 
         margin:0 auto;
     }
-
 }
 
 @include bp($md){

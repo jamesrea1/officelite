@@ -1,14 +1,14 @@
-/**
- * components/hero
- * ===============
- */
+// 
+// components/hero
+// ===============
+// 
 
 .hero{
   text-align: center;
 
   &__image{
-    width:200px;
-    margin:0 auto;
+    width: 200px;
+    margin: 0 auto;
     margin-top: $content-space-32;
   }
   &__content{
@@ -19,7 +19,7 @@
     line-height: $line-height-5xl;
     font-weight: bold;
     color: $color-dark;
-    letter-spacing: 0; //$letter-spacing-lg;
+    letter-spacing: 0;
   }
   &__copy{
     margin-top: $content-space-24;
