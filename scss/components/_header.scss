@@ -4,8 +4,22 @@
 // 
 
 .header{
-    padding: $content-space-40 $content-space-0; 
-    height: auto;
+    padding-top: $content-space-40; 
+    position: static;
+
+    &::before{
+        content: "";
+        position: absolute;
+        height: 275px;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        background: no-repeat
+                    url(../../assets/home/bg-pattern-header.svg)
+                    center top -175px / 450px;
+        //@include d-border(#ccc);
+    }
 
     &__logo{
         width: 155px;
@@ -16,14 +30,33 @@
 
 @include bp($md){
     .header{
-        padding: 0;
-        height: auto;      
+        padding-top: $content-space-72; 
+        
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            height: 700px;
+            left: 0;
+            right: -380px;
+            top: 0;
+            z-index: -1;
+            background: no-repeat
+                        url(../../assets/home/bg-pattern-header.svg)
+                        right top -171px / 700px;
+            @include d-border(red);
+        }
+        
+        &__logo{
+            margin:0;
+        }
     }
 }
 
 @include bp($lg){
     .header{
-        padding: 0;
-        height: auto;      
+        padding-top: $content-space-80; 
+    
     }
 }

@@ -4,7 +4,6 @@
  */
 
 .container{
-    // background-color: $color-white;
     position: relative;
 
     &--dark{
@@ -40,14 +39,15 @@
         margin: 0 auto;
         padding-left: 7%;
         padding-right: 7%;
+    }
+}
 
+@include bp($md){
+    .container{
 
-        @include bp($md){
-            padding:0;
-        }
-        @include bp($lg){
-            padding:0;
+        &__inner{
+            padding-left: $content-space-40;
+            padding-right: $content-space-40;
         }
     }
-
 }

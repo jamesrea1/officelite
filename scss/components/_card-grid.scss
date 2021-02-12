@@ -3,8 +3,21 @@
  * ====================
  */
 
- .card-grid{
-     padding: 50px 0;
-     position: relative;
-     z-index: 2;
- }
+.card-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: $content-space-32;
+    // align-items: stretch;
+}
+
+@include bp($md){
+    .card-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@include bp($lg){
+    .card-grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

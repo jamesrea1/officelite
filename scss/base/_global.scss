@@ -1,17 +1,31 @@
-/**
- * base/global
- * ===========
- */
-
+// 
+// base/global
+// ===========
+// 
 
 body{
-    min-width: 200px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background: $color-light 
-                no-repeat 
-                url(../../assets/home/bg-pattern-header.svg) 
-                50% -170px / 450px;
+    // overflow-x: hidden;
+    // overflow-y: auto;
+    background-color: $color-light;
+
+
+}
+
+main{
+    position: relative;
+
+    &::after{
+        content: "";
+        position: absolute;
+        height: 1040px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        background: no-repeat
+                    url(../../assets/home/bg-pattern-footer.svg)
+                    left 50% bottom -110px / 1220px;
+    }
 }
 
 button {
@@ -21,7 +35,6 @@ button {
     padding: 0;
     margin: 0;
     text-decoration: none;
-    font-size: 1rem;
     cursor: pointer;
     text-align: center;
     outline:none;
@@ -29,3 +42,11 @@ button {
     -moz-appearance: none;
 }
 
+@include bp($md){
+    body{
+        background-position: right 0  top -170px;
+        background-size: 650px;
+
+        // 50% -170px / 450px;
+    }
+}

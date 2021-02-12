@@ -4,12 +4,23 @@
 // 
 
 .footer{ 
-    padding: $content-space-40 $content-space-0; 
+    padding: $content-space-100 $content-space-0; 
     position: relative;
     z-index: 1;
     text-align: center;
 
     &__cta{
         margin-top: $content-space-40;
+    }
+}
+
+@include bp($md){
+ 
+}
+
+@include bp($lg){
+    .footer{
+        display: flex;
+        justify-content: space-between;
     }
 }

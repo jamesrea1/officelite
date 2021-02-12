@@ -1,8 +1,7 @@
-/**
- * abstracts/variables
- * ===================
- */
-
+// 
+// abstracts/variables
+// ===================
+// 
 
 // Content size variables
 $content-max-width: 1120px;
@@ -14,7 +13,8 @@ $color-light: #FAFAFA;
 $color-dark: #25293a;
 $color-gray: #747b95;
 $color-brand-blue: #5175ff;
-$color-pale-blue: #e4eaff;
+$color-light-blue: #D3DCFF;
+$color-very-light-blue: #e4eaff;
 $color-dark-blue: #333950;
 
 
@@ -68,10 +68,14 @@ $line-height-7xl:   pxToRem(64);
 
 
 // Letter spacing variables
-$letter-spacing-xs: -0.1em;
-$letter-spacing-sm: -0.05em;
-$letter-spacing-base: 0;
-$letter-spacing-lg: 0.1em;
+$letter-spacing-xs:    -0.1em;
+$letter-spacing-sm:    -0.05em;
+$letter-spacing-base:   0;
+$letter-spacing-lg:     0.05em;
+$letter-spacing-xl:     0.1em;
+$letter-spacing-2xl:    0.15em;
+$letter-spacing-3xl:    0.2em;
+$letter-spacing-4xl:    0.3em;
 
 
 // Spacing variables
@@ -82,12 +86,19 @@ $paragraph-space-lg: pxToRem(12);
 
 // Content padding variables
 $content-space-0:   pxToRem(0);
+$content-space-4:   pxToRem(4);
+$content-space-8:   pxToRem(8);
+$content-space-12:  pxToRem(12);
 $content-space-16:  pxToRem(16);
+$content-space-20:  pxToRem(20);
 $content-space-24:  pxToRem(24);
+$content-space-28:  pxToRem(28);
 $content-space-32:  pxToRem(32);
 $content-space-40:  pxToRem(40);
 $content-space-48:  pxToRem(48);
 $content-space-56:  pxToRem(56);
+$content-space-64:  pxToRem(64);
+$content-space-72:  pxToRem(72);
 $content-space-80:  pxToRem(80);
 $content-space-100: pxToRem(100);
 

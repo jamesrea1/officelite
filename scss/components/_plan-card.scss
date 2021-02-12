@@ -33,13 +33,13 @@
     }
     &__features{
         margin-top: $content-space-40;
-        
+        text-align: center;
+     
         p{
             margin-top: $content-space-16;
             font-size: $font-size-base;
             font-weight: normal;
             color: $color-gray;
-            text-align: center;
         }
     }
     &__cta{
@@ -57,6 +57,39 @@
         }
         & .plan-card__features p{
             color: $color-light-blue;
+        }
+    }
+}
+
+@include bp($md){
+    .plan-card{
+        display: grid;
+        grid-template-areas: "heading features"
+                             "cta     features";
+
+        &__heading{
+            grid-area: heading;
+            text-align: left;
+        }
+        &__features{
+            grid-area: features;
+            text-align: left;
+        }
+        &__cta{
+            grid-area: cta;
+        }
+    }
+}
+
+@include bp($lg){
+    .plan-card{
+        display: flex;
+    
+        &__heading{
+            text-align: center;
+        }
+        &__features{
+            text-align: center;
         }
     }
 }

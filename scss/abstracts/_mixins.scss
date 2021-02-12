@@ -1,8 +1,7 @@
-/**
- * abstracts/mixins
- * ================
- */
-
+// 
+// abstracts/mixins
+// ================
+// 
 
 @mixin d-border($color: red){
    border: 1px solid $color;
@@ -11,7 +10,6 @@
 @mixin d-bg($color: gray){
    background-color: $color;
 }
-
 
 @mixin bp($device-width) {
   @media (min-width:$device-width) {
