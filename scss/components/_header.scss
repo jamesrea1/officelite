@@ -37,7 +37,7 @@
         &::before{
             content: "";
             position: absolute;
-            height: 700px;
+            height: 702px;
             left: 0;
             right: -380px;
             top: 0;
@@ -45,7 +45,7 @@
             background: no-repeat
                         url(../../assets/home/bg-pattern-header.svg)
                         right top -171px / 700px;
-            @include d-border(red);
+            //@include d-border(red);
         }
         
         &__logo{

@@ -41,6 +41,7 @@
     display:flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    align-items: flex-start;
     text-align: left;
 
     &__content{
@@ -48,11 +49,13 @@
       width: 50%;
     }
     &__image{
-      width: 40%;
+      width: 45.5%;
+      max-width: 375px;
       margin-top: 20px;
-      margin-right:-13px;
+      transform: translatex(5%);
     }
     &__image svg{
+      width: 100%;
       height: auto;
       min-height: auto;
       max-height: none;
@@ -63,6 +66,37 @@
 }
 
 @include bp($lg){
-  
+  .hero{
+    align-items: flex-start;
+    
+    &__image{
+      width: 47.5%;
+      max-width: none;
+      margin-top: 0;
+    }
+    &__content{
+      margin-top: calc(calc(100% - 824px)/4);
+      min-width:490px;
+    }
+    &__title{
+      font-size: $font-size-7xl;
+      line-height: $line-height-7xl;
+    }
+    &__copy{
+      font-size: $font-size-lg;
+      line-height: $line-height-lg;
+    }
+    &__cta-btn{
+      margin-top: $content-space-32;
+    }
+  }
 
+}
+
+@include bp($xl){
+  .hero{
+    &__content{
+      margin-top: $content-space-72;
+    }
+  }
 }

@@ -44,10 +44,30 @@
 
 @include bp($md){
     .container{
+        padding-left: $content-space-40;
+        padding-right: $content-space-40;
+
+        // padding-left: calc(15.625% - 80px);
+        // padding-right: calc(15.625% - 80px);
+
 
         &__inner{
-            padding-left: $content-space-40;
-            padding-right: $content-space-40;
+            padding: 0;
         }
+    }
+}
+
+
+@include bp($lg){
+    .container{
+        // padding-left: $content-space-80;
+        // padding-right: $content-space-80;
+    }
+}
+
+@include bp($xl){
+    // empty rule to show breakpoint in dev tools
+    .delete-me{
+        padding:0; 
     }
 }

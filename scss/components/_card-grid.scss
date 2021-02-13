@@ -7,17 +7,24 @@
     display:grid;
     grid-template-columns: 1fr;
     gap: $content-space-32;
-    // align-items: stretch;
+    max-width: 350px;
+    margin: 0 auto;
 }
 
 @include bp($md){
     .card-grid{
         grid-template-columns: 1fr;
+        gap: $content-space-24;
+        max-width: 700px;
+        margin:0 auto;
     }
 }
 
-@include bp($lg){
+@include bp($xl){
     .card-grid{
         grid-template-columns: repeat(3, 1fr);
+        gap: $content-space-28;
+        max-width: none;
+        margin:0;
     }
 }

@@ -5,13 +5,14 @@
 
 .plan-card{
     padding: $content-space-40 $content-space-32;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     background-color:#FFF;
     border-radius: 0.8rem; 
     box-shadow: 0 2rem 2rem -1rem rgba(73, 85, 136, 0.22);
+    text-align: center;
     
     &__type{
         margin-top: 0;
@@ -33,7 +34,6 @@
     }
     &__features{
         margin-top: $content-space-40;
-        text-align: center;
      
         p{
             margin-top: $content-space-16;
@@ -43,7 +43,7 @@
         }
     }
     &__cta{
-        margin-top: $content-space-32;
+        margin-top: $content-space-40;
     }
 
     &--featured{
@@ -64,32 +64,41 @@
 @include bp($md){
     .plan-card{
         display: grid;
+        grid-template-columns: 1fr 1fr;
         grid-template-areas: "heading features"
                              "cta     features";
-
+        justify-content: stretch;                             
+        padding: $content-space-40 $content-space-48;
+        text-align: left;
+        
         &__heading{
             grid-area: heading;
-            text-align: left;
+        }
+        &__price{
+            margin-top: $content-space-0;
+        }
+        &__description{
+            margin-top: $content-space-0;
         }
         &__features{
             grid-area: features;
-            text-align: left;
+            margin-top: $content-space-0;
+
         }
         &__cta{
             grid-area: cta;
+            margin-top: $content-space-32;
         }
     }
 }
 
-@include bp($lg){
+@include bp($xl){
     .plan-card{
         display: flex;
+        text-align: center;
     
-        &__heading{
-            text-align: center;
-        }
-        &__features{
-            text-align: center;
-        }
+            &__features{
+                margin-top: $content-space-40;
+            }
     }
 }

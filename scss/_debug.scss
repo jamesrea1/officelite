@@ -1,0 +1,13 @@
+$debug: 
+false
+// true
+;
+
+@if $debug{
+    .container__inner{
+        border-left: 1px solid rgb(69, 116, 218) !important;
+        border-right: 1px solid rgb(69, 116, 218) !important;
+    }
+    
+}
+
