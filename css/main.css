@@ -391,12 +391,12 @@ h4 {
     color: #5175ff; }
 
 .countdown__timer {
-  max-width: 20rem;
+  max-width: 21rem;
   margin: 0 auto;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 3%; }
+  gap: 4%; }
 
 .countdown__timer-card {
   padding: 1.25rem 0rem;
@@ -492,18 +492,25 @@ h4 {
     .header::before {
       content: "";
       position: absolute;
-      height: 702px;
-      left: 0;
-      right: -380px;
-      top: 0;
+      height: 680px;
+      width: 680px;
+      left: 53%;
+      right: auto;
+      top: -168px;
       z-index: -1;
-      background: no-repeat url(../../assets/home/bg-pattern-header.svg) right top -171px/700px; }
+      background: no-repeat url(../../assets/home/bg-pattern-header.svg) center/cover; }
     .header__logo {
       margin: 0; } }
 
 @media (min-width: 1024px) {
   .header {
-    padding-top: 5rem; } }
+    padding-top: 5rem; }
+    .header::before {
+      height: 1134px;
+      width: 1134px;
+      left: 44.5%;
+      right: auto;
+      top: -420px; } }
 
 .hero {
   text-align: center;
@@ -543,8 +550,8 @@ h4 {
       width: 50%; }
     .hero__image {
       width: 45.5%;
-      max-width: 375px;
-      margin-top: 20px;
+      max-width: 425px;
+      margin-top: 00px;
       transform: translatex(5%); }
     .hero__image svg {
       width: 100%;
@@ -596,10 +603,11 @@ h4 {
   .plan-card__type {
     margin-top: 0;
     font-size: 1.25rem;
+    line-height: 1;
     font-weight: bold;
     color: #333950; }
   .plan-card__price {
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: 3.5rem;
     font-weight: bold;
     color: #333950; }
@@ -627,7 +635,7 @@ h4 {
 @media (min-width: 768px) {
   .plan-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 4fr 3fr;
     grid-template-areas: "heading features" "cta     features";
     justify-content: stretch;
     padding: 2.5rem 3rem;
@@ -635,22 +643,32 @@ h4 {
     .plan-card__heading {
       grid-area: heading; }
     .plan-card__price {
-      margin-top: 0rem; }
+      margin-top: 0; }
     .plan-card__description {
-      margin-top: 0rem; }
+      margin-top: 0; }
     .plan-card__features {
       grid-area: features;
-      margin-top: 0rem; }
+      margin-top: 0; }
     .plan-card__cta {
       grid-area: cta;
-      margin-top: 2rem; } }
+      margin-top: 2rem; }
+    .plan-card--featured {
+      background-position: -320px 50%; } }
 
 @media (min-width: 1195px) {
   .plan-card {
     display: flex;
     text-align: center; }
+    .plan-card__price {
+      margin-top: 2rem; }
+    .plan-card__description {
+      margin-top: 0; }
     .plan-card__features {
-      margin-top: 2.5rem; } }
+      margin-top: 2.5rem; }
+    .plan-card__cta {
+      margin-top: 2.5rem; }
+    .plan-card--featured {
+      background-position: 50% 100%; } }
 
 /**
  * utilities/utilities

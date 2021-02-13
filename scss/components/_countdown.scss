@@ -18,13 +18,13 @@
         }
     }
     &__timer{
-        max-width: pxToRem(320);
+        max-width: pxToRem(336);
         margin: 0 auto;
         margin-top: $content-space-32;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         //grid-template-columns: repeat(4, calc(25% - (36px/4)));
-        gap: 3%;
+        gap: 4%;
     }
     &__timer-card{
         padding: $content-space-20 $content-space-0;

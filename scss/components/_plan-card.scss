@@ -17,11 +17,12 @@
     &__type{
         margin-top: 0;
         font-size: $font-size-xl;
+        line-height: 1;
         font-weight: bold;
         color: $color-dark-blue;
     }
     &__price{
-        margin-top: $content-space-16;
+        margin-top: $content-space-32;
         font-size: $font-size-7xl;
         font-weight: bold;
         color: $color-dark-blue;
@@ -64,7 +65,7 @@
 @include bp($md){
     .plan-card{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 4fr 3fr;
         grid-template-areas: "heading features"
                              "cta     features";
         justify-content: stretch;                             
@@ -75,19 +76,23 @@
             grid-area: heading;
         }
         &__price{
-            margin-top: $content-space-0;
+            margin-top: 0;
         }
         &__description{
-            margin-top: $content-space-0;
+            margin-top: 0;
         }
         &__features{
             grid-area: features;
-            margin-top: $content-space-0;
+            margin-top: 0;
 
         }
         &__cta{
             grid-area: cta;
             margin-top: $content-space-32;
+        }
+
+        &--featured{
+            background-position: -320px 50%; 
         }
     }
 }
@@ -97,8 +102,21 @@
         display: flex;
         text-align: center;
     
-            &__features{
-                margin-top: $content-space-40;
-            }
+        &__price{
+            margin-top: $content-space-32;
+        }
+        &__description{
+            margin-top: 0;
+        }
+        &__features{
+            margin-top: $content-space-40;
+        }
+        &__cta{
+            margin-top: $content-space-40;
+        }
+
+        &--featured{
+            background-position: 50% 100%; 
+        }
     }
 }

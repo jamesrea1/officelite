@@ -18,9 +18,8 @@
         background: no-repeat
                     url(../../assets/home/bg-pattern-header.svg)
                     center top -175px / 450px;
-        //@include d-border(#ccc);
     }
-
+    
     &__logo{
         width: 155px;
         height: 30px; 
@@ -31,21 +30,20 @@
 @include bp($md){
     .header{
         padding-top: $content-space-72; 
-        
         position: relative;
 
         &::before{
             content: "";
             position: absolute;
-            height: 702px;
-            left: 0;
-            right: -380px;
-            top: 0;
+            height: 680px;
+            width: 680px;
+            left: 53%;   //auto
+            right: auto;   //-350px
+            top: -168px;
             z-index: -1;
             background: no-repeat
                         url(../../assets/home/bg-pattern-header.svg)
-                        right top -171px / 700px;
-            //@include d-border(red);
+                        center  / cover;
         }
         
         &__logo{
@@ -58,5 +56,14 @@
     .header{
         padding-top: $content-space-80; 
     
+        &::before{
+            height: 1134px;
+            width: 1134px;
+            left: 44.5%;   //auto
+            right: auto;   //-350px
+            top: -420px;
+        }   
+
+        //@include d-border(red);
     }
 }
