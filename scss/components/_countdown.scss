@@ -4,6 +4,7 @@
 // 
 
 .countdown{
+    max-width: pxToRem(336);
 
     &__title{
         font-size: $font-size-base;
@@ -13,17 +14,14 @@
         color: $color-white;
         
         span{
-            letter-spacing: $letter-spacing-4xl;
+            //letter-spacing: $letter-spacing-4xl;
             color: $color-brand-blue;
         }
     }
     &__timer{
-        max-width: pxToRem(336);
-        margin: 0 auto;
         margin-top: $content-space-32;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        //grid-template-columns: repeat(4, calc(25% - (36px/4)));
+        grid-template-columns: repeat(4, 1fr);  //grid-template-columns: repeat(4, calc(25% - (36px/4)));
         gap: 4%;
     }
     &__timer-card{
@@ -42,7 +40,7 @@
         color: $color-white;
     }
     &__timer-unit{
-        margin-top: pxToRem(8);
+        margin-top: $content-space-8;
         font-size: $font-size-xs;
         font-weight: bold;
         line-height: 1;
@@ -50,4 +48,41 @@
     }
 }
 
+@include bp($md){
+    .countdown{
+        max-width: pxToRem(450);
 
+        &__title{
+            // font-size: $font-size-base;
+            // letter-spacing: $letter-spacing-4xl;
+            //letter-spacing: $letter-spacing-5xl;
+         }
+        &__timer{
+            margin-top: $content-space-20;
+            gap: 3.5%;
+        }  
+        &__timer-card{
+            padding: $content-space-28 $content-space-0;
+            padding-bottom: $content-space-20;
+            border-radius: $content-space-4;
+            border-radius: $content-space-8;
+        }
+        &__timer-value{
+            font-size: $font-size-7xl;
+            line-height: 1;
+        }
+        &__timer-unit{
+            margin-top: $content-space-8;
+            font-size: $font-size-base;
+            line-height: 1;
+        }    
+    }
+}
+
+@include bp($xl){
+    .countdown{
+        &__timer{
+            margin-top: $content-space-12;
+        }
+    }
+}

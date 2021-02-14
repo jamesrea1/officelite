@@ -34,13 +34,15 @@
         color: $color-dark-blue;
     }
     &__features{
-        margin-top: $content-space-40;
+        margin-top: $content-space-56;
      
         p{
-            margin-top: $content-space-16;
             font-size: $font-size-base;
             font-weight: normal;
             color: $color-gray;
+        }
+        p + p{
+            margin-top: $content-space-16;
         }
     }
     &__cta{
@@ -83,8 +85,7 @@
         }
         &__features{
             grid-area: features;
-            margin-top: 0;
-
+            margin-top: $content-space-0;
         }
         &__cta{
             grid-area: cta;
@@ -109,7 +110,7 @@
             margin-top: 0;
         }
         &__features{
-            margin-top: $content-space-40;
+            margin-top: $content-space-56;
         }
         &__cta{
             margin-top: $content-space-40;

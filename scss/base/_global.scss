@@ -4,28 +4,7 @@
 // 
 
 body{
-    // overflow-x: hidden;
-    // overflow-y: auto;
     background-color: $color-light;
-
-
-}
-
-main{
-    position: relative;
-
-    &::after{
-        content: "";
-        position: absolute;
-        height: 1040px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 0;
-        background: no-repeat
-                    url(../../assets/home/bg-pattern-footer.svg)
-                    left 50% bottom -110px / 1220px;
-    }
 }
 
 button {
@@ -42,11 +21,35 @@ button {
     -moz-appearance: none;
 }
 
-@include bp($md){
-    body{
-        background-position: right 0  top -170px;
-        background-size: 650px;
+main{
+    position: relative;
 
-        // 50% -170px / 450px;
+    &::after{
+        content: "";
+        position: absolute;
+        height: 1040px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        background: no-repeat
+                    url(../../assets/home/bg-pattern-footer.svg)
+                    left 50% bottom -110px / 1220px;
+    
+        @include bp($md){
+            height: 1470px;
+            bottom: -490px;
+            background-position: center bottom;
+            background-size: 1470px;
+        }
+        @include bp($xl){
+            height: 2000px;
+            width: 2000px;
+            left: 50%;
+            right:auto;
+            transform: translate(-1415px, 300px);
+            background-position: center bottom;
+            background-size: 2000px;
+        }
     }
 }

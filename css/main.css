@@ -239,18 +239,6 @@ summary {
 body {
   background-color: #FAFAFA; }
 
-main {
-  position: relative; }
-  main::after {
-    content: "";
-    position: absolute;
-    height: 1040px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    background: no-repeat url(../../assets/home/bg-pattern-footer.svg) left 50% bottom -110px/1220px; }
-
 button {
   display: inline-block;
   border: none;
@@ -264,10 +252,32 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none; }
 
-@media (min-width: 768px) {
-  body {
-    background-position: right 0  top -170px;
-    background-size: 650px; } }
+main {
+  position: relative; }
+  main::after {
+    content: "";
+    position: absolute;
+    height: 1040px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: no-repeat url(../../assets/home/bg-pattern-footer.svg) left 50% bottom -110px/1220px; }
+    @media (min-width: 768px) {
+      main::after {
+        height: 1470px;
+        bottom: -490px;
+        background-position: center bottom;
+        background-size: 1470px; } }
+    @media (min-width: 1195px) {
+      main::after {
+        height: 2000px;
+        width: 2000px;
+        left: 50%;
+        right: auto;
+        transform: translate(-1415px, 300px);
+        background-position: center bottom;
+        background-size: 2000px; } }
 
 body {
   font-family: "Kumbh Sans", sans-serif;
@@ -333,7 +343,7 @@ h4 {
  */
 .plans {
   margin-top: 6.25rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   position: relative;
   z-index: 2; }
 
@@ -380,45 +390,63 @@ h4 {
   .delete-me {
     padding: 0; } }
 
-.countdown__title {
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 0.3em;
-  text-transform: capitalize;
-  color: #FFFFFF; }
-  .countdown__title span {
+.countdown {
+  max-width: 21rem; }
+  .countdown__title {
+    font-size: 1rem;
+    font-weight: bold;
     letter-spacing: 0.3em;
-    color: #5175ff; }
+    text-transform: capitalize;
+    color: #FFFFFF; }
+    .countdown__title span {
+      color: #5175ff; }
+  .countdown__timer {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4%; }
+  .countdown__timer-card {
+    padding: 1.25rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.25rem;
+    background-color: #333950; }
+  .countdown__timer-value {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+    color: #FFFFFF; }
+  .countdown__timer-unit {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1;
+    color: #747b95; }
 
-.countdown__timer {
-  max-width: 21rem;
-  margin: 0 auto;
-  margin-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 4%; }
+@media (min-width: 768px) {
+  .countdown {
+    max-width: 28.125rem; }
+    .countdown__timer {
+      margin-top: 1.25rem;
+      gap: 3.5%; }
+    .countdown__timer-card {
+      padding: 1.75rem 0rem;
+      padding-bottom: 1.25rem;
+      border-radius: 0.25rem;
+      border-radius: 0.5rem; }
+    .countdown__timer-value {
+      font-size: 3.5rem;
+      line-height: 1; }
+    .countdown__timer-unit {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      line-height: 1; } }
 
-.countdown__timer-card {
-  padding: 1.25rem 0rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 0.25rem;
-  background-color: #333950; }
-
-.countdown__timer-value {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1;
-  color: #FFFFFF; }
-
-.countdown__timer-unit {
-  margin-top: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: bold;
-  line-height: 1;
-  color: #747b95; }
+@media (min-width: 1195px) {
+  .countdown__timer {
+    margin-top: 0.75rem; } }
 
 .cta-btn {
   display: inline-block;
@@ -460,13 +488,28 @@ h4 {
   position: relative;
   z-index: 1;
   text-align: center; }
+  .footer__countdown {
+    margin: 0 auto; }
   .footer__cta {
     margin-top: 2.5rem; }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
+  .footer__cta {
+    margin-top: 3rem; } }
+
+@media (min-width: 1195px) {
   .footer {
     display: flex;
-    justify-content: space-between; } }
+    justify-content: space-between;
+    align-items: center;
+    text-align: left; }
+    .footer__countdown {
+      flex: auto;
+      margin: 0 auto 0 0; }
+    .footer__cta {
+      margin-top: 0rem;
+      flex: auto;
+      text-align: right; } }
 
 .header {
   padding-top: 2.5rem;
@@ -617,12 +660,13 @@ h4 {
     font-weight: normal;
     color: #333950; }
   .plan-card__features {
-    margin-top: 2.5rem; }
+    margin-top: 3.5rem; }
     .plan-card__features p {
-      margin-top: 1rem;
       font-size: 1rem;
       font-weight: normal;
       color: #747b95; }
+    .plan-card__features p + p {
+      margin-top: 1rem; }
   .plan-card__cta {
     margin-top: 2.5rem; }
   .plan-card--featured {
@@ -648,7 +692,7 @@ h4 {
       margin-top: 0; }
     .plan-card__features {
       grid-area: features;
-      margin-top: 0; }
+      margin-top: 0rem; }
     .plan-card__cta {
       grid-area: cta;
       margin-top: 2rem; }
@@ -664,7 +708,7 @@ h4 {
     .plan-card__description {
       margin-top: 0; }
     .plan-card__features {
-      margin-top: 2.5rem; }
+      margin-top: 3.5rem; }
     .plan-card__cta {
       margin-top: 2.5rem; }
     .plan-card--featured {
