@@ -26,9 +26,7 @@
 }
 
 @include bp($xl){
-    .footer{
-        //padding: $content-space-100 $content-space-0; 
-        
+    .footer{        
         display: flex;
         justify-content: space-between;
         align-items: center;

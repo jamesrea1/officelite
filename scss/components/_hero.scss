@@ -4,8 +4,11 @@
 // 
 
 .hero{
-  text-align: center;
   margin-top: $content-space-80;
+  max-width: pxToRem(600);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 
   &__image svg{
     display: block;
@@ -38,6 +41,9 @@
 @include bp($md){
   .hero{
     margin-top: $content-space-100;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
     display:flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -61,6 +67,17 @@
       max-height: none;
       margin: 0;
     }
+
+    &--no-image{
+      max-width: pxToRem(600);
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+
+      & .hero__content{
+        width: auto;
+      }
+    }
   }
 
 }
@@ -76,7 +93,7 @@
     }
     &__content{
       margin-top: calc(calc(100% - 824px)/4);
-      min-width:490px;
+      min-width: pxToRem(490);
     }
     &__title{
       font-size: $font-size-7xl;
@@ -89,8 +106,19 @@
     &__cta-btn{
       margin-top: $content-space-32;
     }
+    
+    &--no-image{
+      max-width: none;
+      margin: 0;
+      margin-top: pxToRem(120);
+      text-align: left;
+      
+      & .hero__content{
+        margin-top: 0;
+        min-width: auto;
+      }
+    }
   }
-
 }
 
 @include bp($xl){

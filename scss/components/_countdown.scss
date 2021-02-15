@@ -14,7 +14,6 @@
         color: $color-white;
         
         span{
-            //letter-spacing: $letter-spacing-4xl;
             color: $color-brand-blue;
         }
     }
@@ -46,17 +45,30 @@
         line-height: 1;
         color: $color-gray;
     }
+
+    &--light{
+        .countdown__title{
+            color: $color-dark;
+        }
+        .countdown__timer-card{
+            background-color: $color-light-blue;
+        }
+        .countdown__timer-value{
+            color: $color-brand-blue;
+        }
+    }
+
+    &--signup{
+        text-align: center;
+        margin: 0 auto;
+    }
+    
 }
 
 @include bp($md){
     .countdown{
         max-width: pxToRem(450);
 
-        &__title{
-            // font-size: $font-size-base;
-            // letter-spacing: $letter-spacing-4xl;
-            //letter-spacing: $letter-spacing-5xl;
-         }
         &__timer{
             margin-top: $content-space-20;
             gap: 3.5%;
@@ -78,7 +90,18 @@
         }    
     }
 }
-
+@include bp($lg){
+    .countdown{
+        &--signup{
+            text-align: left;
+            margin-left: 0;
+            
+            .countdown__timer{
+                margin-top: $content-space-12;
+            }
+        }
+    }
+}
 @include bp($xl){
     .countdown{
         &__timer{
