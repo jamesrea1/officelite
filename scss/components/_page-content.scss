@@ -11,6 +11,7 @@
 
     &--tight{
       margin-top: $content-space-72;
+      
       @include bp($md){
          margin-top: $content-space-56;
       }

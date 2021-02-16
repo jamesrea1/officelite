@@ -8,6 +8,8 @@
   max-width: pxToRem(600);
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 2;
   text-align: center;
 
   &__image svg{

@@ -16,9 +16,12 @@ button {
     text-decoration: none;
     cursor: pointer;
     text-align: center;
-    outline:none;
+    outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+
+    font-family: inherit;
+    font-size: inherit;
 }
 
 

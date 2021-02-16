@@ -90,10 +90,17 @@
     </div>
   </section>
 
-  <section class="container">
+  <section class="container container--dark">
     <div class="container__inner">
-      <div class="signup ">
-        <div style="height:400px;display:flex;align-items:center;background-color:orange;">SIGNUP</div>
+      <div class="" style="padding:100px 0 300px;">
+        <form class="signup validate" novalidate>
+          <div class="input-wrap"><input type="text" id="name" placeholder="Name" autofocus required><div class="error"></div></div>
+          <div class="input-wrap"><input type="email" id="email" placeholder="Email"        required><div class="error"></div></div>
+          <div class="input-wrap"><input type="text" id="plan" placeholder="Plan"           required><div class="error"></div></div>
+          <div class="input-wrap"><input type="text" id="phone" placeholder="Phone"         required><div class="error"></div></div>
+          <div class="input-wrap"><input type="text" id="company" placeholder="Company"     required><div class="error"></div></div>
+          <button class="signup__btn cta-btn cta-btn--wide">Get on the list</button>
+        </form>
       </div>
     </div>
   </section>
