@@ -3,8 +3,9 @@
  * =================
  */
 
-
 .signup{
+    $transition-duration: 0.3s;
+
     padding: 16px 24px 30px;
     display: flex;
     flex-direction: column;
@@ -23,9 +24,10 @@
         line-height: 1;
         color: $color-dark;
         border-radius: 3px;
+        transition: border $transition-duration;
 
         &::placeholder{
-            color: #bbb;
+            color: #aaa;
             font-weight:normal;
             opacity: 1;
         }
@@ -33,10 +35,6 @@
             outline: none;
             box-shadow: 0 0 2px 3px lighten(#5175ff, 23) inset;
             border-bottom-color: lighten(#5175ff, 23);
-            //border-radius: 2px;
-            //border: 5px solid $color-very-light-blue;
-            //border-bottom: 1px solid $color-brand-blue;
-
         }
         & + input{
             margin-top: 50px;
@@ -47,14 +45,13 @@
         position:relative;
     }
 
-    input[data-validity="invalid"] {
-        border-bottom-color: red;
-    }
-    input[data-validity="invalid"] + .error{
+    .error{
         &::after{
             content: "";
             position: absolute;
-            display: block;
+            //display: block;
+            visibility: hidden;
+            opacity: 0;
             width: 16px;
             right: 1rem;
             top:0;
@@ -63,9 +60,19 @@
                         no-repeat
                         right;
             background-size: contain; 
+            transition: visibility $transition-duration, opacity $transition-duration;
         }
     }
 
+    input[data-validity="invalid"] {
+        border-bottom-color: red;
+    }
+    input[data-validity="invalid"] + .error{
+        &::after{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
 
     &__btn{
         margin-top: 42px;
