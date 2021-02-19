@@ -1,3 +1,7 @@
+/*
+ *  Validate form
+ */
+
 const form = document.querySelector(".validate");
 form.addEventListener('blur', handleBlur, true);
 form.addEventListener('input', handleInput);
@@ -22,7 +26,8 @@ function handleInput(event){
 
 function validate(field){
     // Don't validate submits, buttons, file and reset inputs, and disabled fields
-    if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') return;
+    //if (field.disabled || field.type === 'file' || field.type === 'reset' || field.type === 'submit' || field.type === 'button') return;
+    if (field.disabled || field.tagName != 'INPUT') return;
 
     const hasErrors = !field.validity.valid;
     if(hasErrors){
@@ -54,10 +59,12 @@ function handleSubmit(event){
     // else{
         
     // }
-
 }
 
 function fieldHasValue(field){
+    if(field.value == null){
+        return false;
+    }
     return field.value.length > 0;
 }
 
@@ -67,5 +74,38 @@ function fieldTouched(field){
 
 
 
+/*
+ *  Custom select
+ */
 
+const formSelect = document.querySelector(".js-form-select");
 
+formSelect.addEventListener('click', function(e) {
+    if(e.target.closest(".form-select__trigger")){
+        // show/hide dropdown
+        this.classList.toggle("form-select--is-active");
+    }
+    if(e.target.closest(".form-select__option")){
+        // get clicked option
+        const clickedOption = e.target.closest(".form-select__option");
+        
+        // update --is-selected
+        const allOptions = this.querySelectorAll(".form-select__option")
+        allOptions.forEach(option => { option.classList.remove("form-select__option--is-selected")})
+        clickedOption.classList.add("form-select__option--is-selected");
+        
+        // update value
+        let selection = clickedOption.innerHTML;
+        this.querySelector(".form-select__value").innerHTML = selection;
+        
+        // close dropdown
+        this.classList.remove("form-select--is-active");
+    }
+});
+
+document.addEventListener('click', e => {
+    // close custom select dropdown
+    if(!formSelect.contains(e.target)){
+        formSelect.classList.remove("form-select--is-active");
+    }
+});

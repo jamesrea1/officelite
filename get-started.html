@@ -94,12 +94,43 @@
     <div class="container__inner">
       <div class="" style="padding:100px 0 300px;">
         <form class="signup validate" novalidate>
-          <div class="input-wrap"><input type="text" id="name" placeholder="Name" autofocus required><div class="error"></div></div>
-          <div class="input-wrap"><input type="email" id="email" placeholder="Email"        required><div class="error"></div></div>
-          <div class="input-wrap"><input type="text" id="plan" placeholder="Plan"           required><div class="error"></div></div>
-          <div class="input-wrap"><input type="text" id="phone" placeholder="Phone"         required><div class="error"></div></div>
-          <div class="input-wrap"><input type="text" id="company" placeholder="Company"     required><div class="error"></div></div>
-          <button class="signup__btn cta-btn cta-btn--full-width">Get on the list</button>
+
+          <div class="form-control signup__input">
+            <input type="text" class="form-control__input" name="name" placeholder="Name" autofocus required>
+            <span class="form-control__error"><span>
+          </div>
+          
+          <div class="form-control signup__input">
+            <input type="email" class="form-control__input" name="email" placeholder="Email" required>
+            <span class="form-control__error"><span>
+          </div>
+
+          <div class="form-select js-form-select signup__plan-select">
+            <div class="form-select__trigger" tabindex="0">
+              <div class="form-select__value">
+                <b>Basic Pack</b> <span>Free</span>
+              </div>
+              <span class="form-select__arrow"></span>
+            </div>
+            <div class="form-select__options">
+              <div class="form-select__option form-select__option--is-selected" data-value=""><b>Basic Pack</b> <span>Free</span></div>
+              <div class="form-select__option" data-value=""><b>Pro Pack</b> <span>£9.99</span></div>
+              <div class="form-select__option" data-value=""><b>Ultimate Pack</b> <span>£19.99</span></div>
+            </div>
+          </div>
+
+          <div class="form-control signup__input">
+            <input type="text" class="form-control__input" name="phone" placeholder="Phone">
+            <span class="form-control__error"></span>
+          </div>
+          
+          <div class="form-control signup__input">
+            <input type="text" class="form-control__input" name="company" placeholder="Company">
+            <span class="form-control__error"><span>
+          </div>
+
+          <button class="signup__submit-btn cta-btn cta-btn--full-width">Get on the list</button>
+        
         </form>
       </div>
     </div>

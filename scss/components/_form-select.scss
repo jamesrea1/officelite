@@ -1,0 +1,119 @@
+ /**
+ * components/form-select
+ * ======================
+ */
+
+.form-select{
+  $transition-duration: 0.3s;
+
+  position:relative;
+
+  &__trigger{
+    position: relative;
+    padding: 30px 16px 24px 16px;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    border-bottom: 1px solid #bbb;
+    background-color: #fff;
+    border-radius: 3px;
+    line-height: 1;
+    transition: border $transition-duration;
+    cursor: pointer;
+
+    &:focus { 
+        outline: none;
+        box-shadow: 0 0 2px 3px lighten(#5175ff, 23) inset;
+        border-bottom-color: lighten(#5175ff, 23);
+    }
+  }
+    
+  &__value, &__option{
+    & b{
+      margin-right: $content-space-8;
+      color: $color-dark;
+      font-weight: bold;
+    }
+    & span{
+      color: #aaa;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        width: 2px;
+        height: 100%;
+        transition: all 0.5s;
+    }
+    &::before {
+        left: -3px;
+        transform: rotate(45deg);
+        background-color: $color-dark;
+    }
+    &::after {
+        left: 3px;
+        transform: rotate(-45deg);
+        background-color: $color-dark;
+    }
+  }
+
+  &__options{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    box-shadow: 0 2rem 2rem -1rem rgba(73, 85, 136, 0.22);
+    background-color: $color-white;
+  }
+
+  &__option{
+    position: relative;
+    padding: 0.25rem 1rem;
+    line-height: 2.4em;
+    cursor: pointer;
+
+    &:hover{
+      background-color: $color-very-light-blue;
+    }
+
+    &--is-selected::after{
+      content: "";
+      position: absolute;
+      right: 1rem;
+      top: 0;
+      bottom: 0;
+      width: 1.2rem;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iIzUxNzVmZiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAuMjg1IDJsLTExLjI4NSAxMS41NjctNS4yODYtNS4wMTEtMy43MTQgMy43MTYgOSA4LjcyOCAxNS0xNS4yODV6Ii8+PC9zdmc+')
+                  no-repeat
+                  right;
+      background-size: contain; 
+    }
+  }
+  
+  &--is-active{
+    .form-select__options{
+      display: block;
+    }
+    .form-select__arrow{
+      &::before {
+        transform: rotate(-45deg);
+      }
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
