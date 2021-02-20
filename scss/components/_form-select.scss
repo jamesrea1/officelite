@@ -55,12 +55,12 @@
     &::before {
         left: -3px;
         transform: rotate(45deg);
-        background-color: $color-dark;
+        background-color: $color-brand-blue;
     }
     &::after {
         left: 3px;
         transform: rotate(-45deg);
-        background-color: $color-dark;
+        background-color: $color-brand-blue;
     }
   }
 
@@ -95,8 +95,8 @@
       right: 1rem;
       top: 0;
       bottom: 0;
-      width: 1.2rem;
-      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iIzUxNzVmZiIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMjAuMjg1IDJsLTExLjI4NSAxMS41NjctNS4yODYtNS4wMTEtMy43MTQgMy43MTYgOSA4LjcyOCAxNS0xNS4yODV6Ii8+PC9zdmc+')
+      width: 1rem;
+      background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iMTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgNy41MDRMMy45OTQgMTAuNSAxMy40OTQgMSIgc3Ryb2tlPSIjNTE3NUZGIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==')
                   no-repeat
                   right;
       background-size: contain; 

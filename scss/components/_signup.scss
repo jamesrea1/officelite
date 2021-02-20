@@ -4,6 +4,8 @@
  */
 
 .signup{
+    max-width: pxToRem(450);
+    margin:0 auto;
     padding: 16px 24px 30px;
     display: flex;
     flex-direction: column;
