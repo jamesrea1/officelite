@@ -4,7 +4,8 @@
  */
 
 .form-select{
-  $transition-duration: 0.3s;
+  $transition-duration: 0.4s;
+  $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   position:relative;
 
@@ -50,7 +51,7 @@
         bottom: 0px;
         width: 2px;
         height: 100%;
-        transition: all 0.5s;
+        transition: all #{$transition-duration /2} ease-out;
     }
     &::before {
         left: -3px;
@@ -65,11 +66,17 @@
   }
 
   &__options{
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     z-index: 1;
+    transform: translateY(-2rem);
+    transition: transform #{$transition-duration * 3} ease-out,
+                opacity #{$transition-duration /2} ease-out,
+                visibility 0s $transition-duration,
+                left 0s $transition-duration;
     top: 100%;
-    left: 0;
+    left: -9999px;
     right: 0;
     margin: 0.5rem 0;
     padding: 0.5rem 0;
@@ -78,17 +85,17 @@
     box-shadow: 0 2rem 2rem -1rem rgba(73, 85, 136, 0.22);
     background-color: $color-white;
   }
-
+  
   &__option{
     position: relative;
     padding: 0.25rem 1rem;
     line-height: 2.4em;
     cursor: pointer;
-
+    
     &:hover{
       background-color: $color-very-light-blue;
     }
-
+    
     &--is-selected::after{
       content: "";
       position: absolute;
@@ -105,9 +112,18 @@
   
   &--is-active{
     .form-select__options{
-      display: block;
+      visibility: visible;
+      opacity: 1;
+      left: 0;
+      height: auto;
+      transform: translateY(0);
+      transition: transform $transition-duration $timing-function,
+                  opacity #{$transition-duration * 3/4} #{$transition-duration /4} $timing-function;
     }
     .form-select__arrow{
+      &::before, &::after {
+        transition-duration: $transition-duration;
+      }
       &::before {
         transform: rotate(-45deg);
       }

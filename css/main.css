@@ -592,7 +592,7 @@ h4 {
     background-color: #fff;
     border-radius: 3px;
     line-height: 1;
-    transition: border 0.3s;
+    transition: border 0.4s;
     cursor: pointer; }
     .form-select__trigger:focus {
       outline: none;
@@ -614,7 +614,7 @@ h4 {
       bottom: 0px;
       width: 2px;
       height: 100%;
-      transition: all 0.5s; }
+      transition: all 0.2s ease-out; }
     .form-select__arrow::before {
       left: -3px;
       transform: rotate(45deg);
@@ -624,11 +624,14 @@ h4 {
       transform: rotate(-45deg);
       background-color: #5175ff; }
   .form-select__options {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     z-index: 1;
+    transform: translateY(-2rem);
+    transition: transform 1.2s ease-out, opacity 0.2s ease-out, visibility 0s 0.4s, left 0s 0.4s;
     top: 100%;
-    left: 0;
+    left: -9999px;
     right: 0;
     margin: 0.5rem 0;
     padding: 0.5rem 0;
@@ -653,7 +656,14 @@ h4 {
       background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUiIGhlaWdodD0iMTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEgNy41MDRMMy45OTQgMTAuNSAxMy40OTQgMSIgc3Ryb2tlPSIjNTE3NUZGIiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==") no-repeat right;
       background-size: contain; }
   .form-select--is-active .form-select__options {
-    display: block; }
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+    height: auto;
+    transform: translateY(0);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s 0.1s cubic-bezier(0.4, 0, 0.2, 1); }
+  .form-select--is-active .form-select__arrow::before, .form-select--is-active .form-select__arrow::after {
+    transition-duration: 0.4s; }
   .form-select--is-active .form-select__arrow::before {
     transform: rotate(-45deg); }
   .form-select--is-active .form-select__arrow::after {

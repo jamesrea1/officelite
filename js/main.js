@@ -86,6 +86,10 @@ formSelect.addEventListener('click', function(e) {
         this.classList.toggle("form-select--is-active");
     }
     if(e.target.closest(".form-select__option")){
+        // focus trigger (trigger will lose focus when user clicks on option)
+        const trigger = this.querySelector('.form-select__trigger');
+        trigger.focus();
+        
         // get clicked option
         const clickedOption = e.target.closest(".form-select__option");
         
