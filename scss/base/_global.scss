@@ -19,9 +19,27 @@ button {
     outline: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-
     font-family: inherit;
     font-size: inherit;
 }
 
-
+.wrapper{
+    overflow: hidden;
+    
+    @include bp($xl){
+        min-height: 100vh;
+        position: relative;
+        &::before{
+            content: "";
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(320px);
+            right: 0;
+            position: absolute;
+            z-index: 0;
+            background: no-repeat url(../../assets/sign-up/bg-pattern-side.svg) left -780px top -800px / 2090px;
+            background-color: $color-dark;
+        }
+    }
+}

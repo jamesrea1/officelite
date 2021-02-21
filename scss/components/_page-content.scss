@@ -18,5 +18,8 @@
       @include bp($md){
          margin-top: $content-space-56;
       }
+      @include bp($xl){
+         padding-bottom: pxToRem(160);
+      }
    }
 }

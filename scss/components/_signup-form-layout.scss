@@ -17,15 +17,17 @@
         margin-top: $content-space-80;
     }
     
-    // @include bp($xl){
-    //     margin: 0;
-    //     padding: 0;
-    //     position: absolute;
-    //     z-index: 2;
-    //     top:0;
-    //     right:0;
-        
-    // }
+    @include bp($xl){
+        width: pxToRem(470);
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        z-index: 2;
+        top:0;
+        left: 50%;
+
+        transform: translateX(90px);
+    }
 }
 
 
