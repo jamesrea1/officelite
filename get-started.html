@@ -14,9 +14,9 @@
 </head>
 <body>
 <div class="wrapper" style="overflow:hidden;">
-<header class="container">
+<header class="container container--signup">
   <div class="container__inner">
-    <div class="header">
+    <div class="header header--signup">
       <div class="logo header__logo">
         <a href="./" class="logo__link">
           <svg width="155" height="30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -43,15 +43,15 @@
   </div>
 </header>
 
-<main>
-  <section class="container">
+<main class="footer-bg footer-bg--signup">
+  <section class="container container--signup">
     <div class="container__inner">
       <div class="hero hero--no-image">
-        <div class="hero__content">
-          <h1 class="hero__title">
+        <div class="hero__content hero__content--no-image">
+          <h1 class="hero__title hero__title--no-image">
             Work smarter. Save&nbsp;time.
           </h1>
-          <p class="hero__copy">
+          <p class="hero__copy hero__copy--no-image">
             Easily manage your projects. Get on the list and receive in-app perks available only to early subscribers. 
             We are moving into final development and getting ready for official launch soon.
           </p>
@@ -60,9 +60,9 @@
     </div>
   </section>
 
-  <section class="container">
+  <section class="container container--signup">
     <div class="container__inner">
-      <div class="page-content page-content--tight">
+      <div class="page-content page-content--signup">
         <div class="countdown countdown--light countdown--signup">
           <div class="countdown__title">
             COMING <span>1 FEB 2021</span>
@@ -90,22 +90,22 @@
     </div>
   </section>
 
-  <section class="container container--dark">
+  <section class="container container--signup container--split-background">
     <div class="container__inner">
-      <div class="" style="padding:100px 0 300px;">
+      <div class="signup-form-layout">
         <form class="signup validate" novalidate>
 
-          <div class="form-control signup__input">
-            <input type="text" class="form-control__input" name="name" placeholder="Name" autofocus required>
+          <div class="form-control">
+            <input type="text" class="form-control__input" name="name" placeholder="Name" required>
             <span class="form-control__error"><span>
           </div>
           
-          <div class="form-control signup__input">
-            <input type="email" class="form-control__input" name="email" placeholder="Email" required>
+          <div class="form-control">
+            <input type="email" class="form-control__input" name="email" placeholder="Email Address" required>
             <span class="form-control__error"><span>
           </div>
 
-          <div class="form-select js-form-select signup__plan-select">
+          <div class="form-select js-form-select">
             <div class="form-select__trigger" tabindex="0">
               <div class="form-select__value">
                 <b>Basic Pack</b> <span>Free</span>
@@ -119,12 +119,12 @@
             </div>
           </div>
 
-          <div class="form-control signup__input">
-            <input type="text" class="form-control__input" name="phone" placeholder="Phone">
+          <div class="form-control">
+            <input type="text" class="form-control__input" name="phone" placeholder="Phone Number">
             <span class="form-control__error"></span>
           </div>
           
-          <div class="form-control signup__input">
+          <div class="form-control">
             <input type="text" class="form-control__input" name="company" placeholder="Company">
             <span class="form-control__error"><span>
           </div>
@@ -135,6 +135,14 @@
       </div>
     </div>
   </section>
+
+  <section class="container container--dark">
+    <div class="container__inner">
+      <div class="footer footer--empty">
+      </div>
+    </div>
+  </section>
+        
 
 </main>
 </div>

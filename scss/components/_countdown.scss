@@ -51,7 +51,7 @@
             color: $color-dark;
         }
         .countdown__timer-card{
-            background-color: $color-light-blue;
+            background-color: $color-very-light-blue;
         }
         .countdown__timer-value{
             color: $color-brand-blue;
@@ -61,6 +61,10 @@
     &--signup{
         text-align: center;
         margin: 0 auto;
+        max-width: pxToRem(400);
+        & .countdown__timer{
+            margin-top: $content-space-24;
+        }
     }
     
 }
@@ -88,24 +92,27 @@
             font-size: $font-size-base;
             line-height: 1;
         }    
-    }
-}
-@include bp($lg){
-    .countdown{
+
         &--signup{
-            text-align: left;
-            margin-left: 0;
-            
-            .countdown__timer{
-                margin-top: $content-space-12;
-            }
+            max-width: pxToRem(470);
         }
     }
 }
 @include bp($xl){
     .countdown{
+
         &__timer{
             margin-top: $content-space-12;
         }
+
+        &--signup{
+            text-align: left;
+            margin-left: 0;
+            
+            .countdown__timer{
+                margin-top: $content-space-20;
+            }
+        }
     }
 }
+

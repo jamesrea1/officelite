@@ -38,6 +38,10 @@
   &__cta-btn{
     margin-top: $content-space-24;
   }
+
+  &__content--no-image{
+    margin-top: $content-space-0;
+  }
 }
 
 @include bp($md){
@@ -69,16 +73,17 @@
       max-height: none;
       margin: 0;
     }
-
+    
     &--no-image{
       max-width: pxToRem(600);
+      margin-top: $content-space-100;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-
-      & .hero__content{
-        width: auto;
-      }
+    }
+    &__content--no-image{
+      width: auto;
+      margin-top: $content-space-0;
     }
   }
 
@@ -110,16 +115,22 @@
     }
     
     &--no-image{
-      max-width: none;
-      margin: 0;
-      margin-top: pxToRem(120);
-      text-align: left;
-      
-      & .hero__content{
-        margin-top: 0;
-        min-width: auto;
-      }
+      max-width: pxToRem(640);
+      margin-top: $content-space-100;
     }
+    &__content--no-image{
+      margin-top: $content-space-0;
+      min-width: auto;
+    }
+    &__title--no-image{
+      font-size: $font-size-6xl;
+      line-height: $line-height-6xl;
+    }
+    // &__copy--no-image{
+    //   font-size: $font-size-lg;
+    //   line-height: $line-height-lg;
+    // }
+
   }
 }
 
@@ -127,6 +138,21 @@
   .hero{
     &__content{
       margin-top: $content-space-72;
+    }
+
+    &--no-image{
+      max-width: 50%;
+      margin-right: auto;
+      margin-left: 0;
+      margin-top: $content-space-150;
+    }
+    &__content--no-image{
+      margin-top: $content-space-0;
+      text-align: left;
+    }
+    &__title--no-image{
+      font-size: $font-size-7xl;
+      line-height: $line-height-7xl;
     }
   }
 }

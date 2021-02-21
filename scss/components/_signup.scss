@@ -4,8 +4,6 @@
  */
 
 .signup{
-    max-width: pxToRem(450);
-    margin:0 auto;
     padding: 16px 24px 30px;
     display: flex;
     flex-direction: column;
@@ -13,15 +11,13 @@
     box-shadow: 0 2rem 2rem -1rem rgba(73, 85, 136, 0.22);
     background-color: $color-white;
 
-    &__input{
-        
-    }
-
-    &__plan-select{
-
-    }
-    
     &__submit-btn{
         margin-top: 42px;
     }
+
+    @include bp($md){
+        padding: 30px 40px 50px;
+    }
 }
+
+

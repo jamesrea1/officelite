@@ -1,0 +1,31 @@
+ /**
+ * components/signup-form-layout
+ * =============================
+ */
+
+.signup-form-layout{
+    max-width: pxToRem(400);
+    margin-top: $content-space-72;
+    margin-left: auto;
+    margin-right: auto;
+
+    position: relative;
+    z-index: 2;
+    
+    @include bp($md){
+        max-width: pxToRem(470);
+        margin-top: $content-space-80;
+    }
+    
+    // @include bp($xl){
+    //     margin: 0;
+    //     padding: 0;
+    //     position: absolute;
+    //     z-index: 2;
+    //     top:0;
+    //     right:0;
+        
+    // }
+}
+
+

@@ -34,4 +34,22 @@
             background-size: 2000px;
         }
     }
+
+    &--signup{
+        &::after{
+            height: 1170px;
+            bottom: -450px;
+            background: no-repeat url(../../assets/sign-up/bg-pattern-side.svg) left 50% bottom 0 / 1170px;
+        
+            @include bp($md){
+                height: 1590px;
+                bottom: -590px;
+                background-position: center bottom;
+                background-size: 1590px;
+            }
+            @include bp($xl){
+                display: none;
+            }
+        }
+    }
 }

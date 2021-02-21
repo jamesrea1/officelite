@@ -4,13 +4,21 @@
  */
 
 .container{
-    position: relative;
-
+    padding-left: 7%;
+    padding-right: 7%;
+    
+    &__inner{
+        max-width: $content-max-width;
+        margin: 0 auto;
+    }
+    
     &--dark{
         background-color: $color-dark;
     }
     
-    &--plans{
+    &--split-background{
+        position: relative;
+        
         &::before{
             content: "";
             position: absolute;
@@ -34,12 +42,7 @@
         }
     }
 
-    &__inner{
-        max-width: $content-max-width;
-        margin: 0 auto;
-        padding-left: 7%;
-        padding-right: 7%;
-    }
+
 }
 
 @include bp($md){
@@ -48,9 +51,19 @@
         padding-right: $content-space-40;
         // padding-left: calc(15.625% - 80px);
         // padding-right: calc(15.625% - 80px);
-
-        &__inner{
-            padding: 0;
-        }
     }
+}
+
+@include bp($xl){
+    // .container--signup.container--split-background{
+    //     position: static;
+
+    //     &::after, &::before{
+    //         display:none;
+    //     }
+    // }
+    // .container--signup .container__inner{
+    //     // width: 50%;
+    //     // transform: translateX(-50%);
+    // }
 }

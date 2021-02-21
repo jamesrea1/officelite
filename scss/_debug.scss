@@ -1,16 +1,32 @@
 $debug: 
-false
-// true
+// false
+true
 ;
 
 @if $debug{
+
     .container__inner{
-        border-left: 1px solid rgb(69, 116, 218) !important;
-        border-right: 1px solid rgb(69, 116, 218) !important;
-    }
-    .hero__content{
-        border-left: 1px solid rgb(69, 116, 218) !important;
-        border-right: 1px solid rgb(69, 116, 218) !important;
-    }
+        border: 1px solid rgb(69, 116, 218) !important;
+        border-top: none !important;
+        border-bottom: none !important;
+    }   
+
+
+    // .container{
+    //     @include d-border;
+
+    //     &__inner{
+    //         @include d-border(blue);
+    //     }
+    // }
+            
+            
+            
+
+    // .hero__content{
+    //     border-left: 1px solid rgb(69, 116, 218) !important;
+    //     border-right: 1px solid rgb(69, 116, 218) !important;
+    // }
+
 }
 

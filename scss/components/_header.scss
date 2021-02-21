@@ -65,3 +65,9 @@
         }   
     }
 }
+
+@include bp($md){
+    .header--signup::before{
+        display: none;
+    }
+}

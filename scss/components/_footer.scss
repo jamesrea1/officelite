@@ -15,12 +15,21 @@
     &__cta{
         margin-top: $content-space-40;
     }
+
+    &--empty{
+        padding: 0;
+        height: $content-space-80;
+    }
 }
 
 @include bp($md){
     .footer{
         &__cta{
             margin-top: $content-space-48;
+        }
+
+        &--empty{
+            height: $content-space-120;
         }
     }
 }
@@ -40,6 +49,10 @@
             margin-top: $content-space-0;
             flex: auto;
             text-align: right;
+        }
+
+        &--empty{
+            display: none;
         }
     }
 }

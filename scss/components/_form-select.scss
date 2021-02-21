@@ -35,7 +35,7 @@
       font-weight: bold;
     }
     & span{
-      color: #aaa;
+      color: $color-dark;
     }
   }
 
@@ -43,6 +43,7 @@
     position: relative;
     width: 10px;
     height: 10px;
+    transform: translateX(-2px);
     
     &::before, &::after {
         content: "";

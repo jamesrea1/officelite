@@ -66,19 +66,19 @@
 
 @include bp($md){
     .plan-card{
+        padding: $content-space-48 $content-space-48;
         display: grid;
         grid-template-columns: 4fr 3fr;
         grid-template-areas: "heading features"
                              "cta     features";
         justify-content: stretch;                             
-        padding: $content-space-40 $content-space-48;
         text-align: left;
         
         &__heading{
             grid-area: heading;
         }
         &__price{
-            margin-top: 0;
+            margin-top: 12px;
         }
         &__description{
             margin-top: 0;
