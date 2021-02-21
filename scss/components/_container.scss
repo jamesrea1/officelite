@@ -55,15 +55,19 @@
 }
 
 @include bp($xl){
-    // .container--signup.container--split-background{
-    //     position: static;
+    .container--signup{
+        // background-color: ;
+    }
+    
+    .container--signup.container--split-background{
+        position: static;
 
-    //     &::after, &::before{
-    //         display:none;
-    //     }
-    // }
-    // .container--signup .container__inner{
-    //     // width: 50%;
-    //     // transform: translateX(-50%);
-    // }
+        &::after, &::before{
+            display:none;
+        }
+    }
+    .container--signup .container__inner{
+        // width: 50%;
+        // transform: translateX(-50%);
+    }
 }

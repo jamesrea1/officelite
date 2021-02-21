@@ -254,6 +254,24 @@ button {
   font-family: inherit;
   font-size: inherit; }
 
+.wrapper {
+  overflow: hidden; }
+  @media (min-width: 1195px) {
+    .wrapper {
+      min-height: 100vh;
+      position: relative; }
+      .wrapper::before {
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(320px);
+        right: 0;
+        position: absolute;
+        z-index: 0;
+        background: no-repeat url(../../assets/sign-up/bg-pattern-side.svg) left -780px top -800px/2090px;
+        background-color: #25293a; } }
+
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 1rem;
@@ -327,6 +345,9 @@ h4 {
   @media (min-width: 768px) {
     .page-content--signup {
       margin-top: 3.5rem; } }
+  @media (min-width: 1195px) {
+    .page-content--signup {
+      padding-bottom: 10rem; } }
 
 /**
  * components/container
@@ -365,6 +386,12 @@ h4 {
   .container {
     padding-left: 2.5rem;
     padding-right: 2.5rem; } }
+
+@media (min-width: 1195px) {
+  .container--signup.container--split-background {
+    position: static; }
+    .container--signup.container--split-background::after, .container--signup.container--split-background::before {
+      display: none; } }
 
 .countdown {
   max-width: 21rem; }
@@ -973,6 +1000,16 @@ h4 {
     .signup-form-layout {
       max-width: 29.375rem;
       margin-top: 5rem; } }
+  @media (min-width: 1195px) {
+    .signup-form-layout {
+      width: 29.375rem;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 50%;
+      transform: translateX(90px); } }
 
 /**
  * utilities/utilities
@@ -998,10 +1035,5 @@ h4 {
 
 .z-auto {
   z-index: auto; }
-
-.container__inner {
-  border: 1px solid #4574da !important;
-  border-top: none !important;
-  border-bottom: none !important; }
 
 /*# sourceMappingURL=main.css.map */
