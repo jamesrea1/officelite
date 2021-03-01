@@ -273,7 +273,7 @@ button {
         right: 0;
         position: absolute;
         z-index: 0;
-        background: no-repeat url(../../assets/sign-up/bg-pattern-side.svg) left -780px top -800px/2090px;
+        background: no-repeat url(../assets/sign-up/bg-pattern-side.svg) left -780px top -800px/2090px;
         background-color: #25293a; } }
 
 body {
@@ -582,7 +582,7 @@ h4 {
     right: 0;
     bottom: 0;
     z-index: 0;
-    background: no-repeat url(../../assets/home/bg-pattern-footer.svg) left 50% bottom -110px/1220px; }
+    background: no-repeat url(../assets/home/bg-pattern-footer.svg) left 50% bottom -110px/1220px; }
     @media (min-width: 768px) {
       .footer-bg::after {
         height: 1470px;
@@ -602,7 +602,7 @@ h4 {
   .footer-bg--signup::after {
     height: 1170px;
     bottom: -450px;
-    background: no-repeat url(../../assets/sign-up/bg-pattern-side.svg) left 50% bottom 0/1170px; }
+    background: no-repeat url(../assets/sign-up/bg-pattern-side.svg) left 50% bottom 0/1170px; }
     @media (min-width: 768px) {
       .footer-bg--signup::after {
         height: 1590px;
@@ -808,7 +808,7 @@ h4 {
     right: 0;
     top: 0;
     z-index: -1;
-    background: no-repeat url(../../assets/home/bg-pattern-header.svg) center top -175px/450px; }
+    background: no-repeat url(../assets/home/bg-pattern-header.svg) center top -175px/450px; }
   .header__logo {
     width: 155px;
     height: 30px;
@@ -827,7 +827,7 @@ h4 {
       right: auto;
       top: -168px;
       z-index: -1;
-      background: no-repeat url(../../assets/home/bg-pattern-header.svg) center/cover; }
+      background: no-repeat url(../assets/home/bg-pattern-header.svg) center/cover; }
     .header__logo {
       margin: 0; } }
 
@@ -920,7 +920,10 @@ h4 {
       text-align: center; }
     .hero__content--no-image {
       width: auto;
-      margin-top: 0rem; } }
+      margin-top: 0rem; }
+    .hero__title--no-image {
+      font-size: 3rem;
+      line-height: 3.5rem; } }
 
 @media (min-width: 1024px) {
   .hero {
@@ -1021,7 +1024,7 @@ h4 {
   .plan-card__cta {
     margin-top: 2.5rem; }
   .plan-card--featured {
-    background: #5175ff no-repeat url(../../assets/home/bg-pattern-pricing.svg) 50% 100%; }
+    background: #5175ff no-repeat url(../assets/home/bg-pattern-pricing.svg) 50% 100%; }
     .plan-card--featured .plan-card__type, .plan-card--featured .plan-card__price, .plan-card--featured .plan-card__description {
       color: #FFFFFF; }
     .plan-card--featured .plan-card__features p {

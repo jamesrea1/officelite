@@ -15,7 +15,7 @@
         bottom: 0;
         z-index: 0;
         background: no-repeat
-                    url(../../assets/home/bg-pattern-footer.svg)
+                    url(../assets/home/bg-pattern-footer.svg)
                     left 50% bottom -110px / 1220px;
     
         @include bp($md){
@@ -39,7 +39,7 @@
         &::after{
             height: 1170px;
             bottom: -450px;
-            background: no-repeat url(../../assets/sign-up/bg-pattern-side.svg) left 50% bottom 0 / 1170px;
+            background: no-repeat url(../assets/sign-up/bg-pattern-side.svg) left 50% bottom 0 / 1170px;
         
             @include bp($md){
                 height: 1590px;

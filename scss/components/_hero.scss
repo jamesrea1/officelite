@@ -85,6 +85,11 @@
       width: auto;
       margin-top: $content-space-0;
     }
+    &__title--no-image{
+      font-size: $font-size-6xl;
+      line-height: $line-height-6xl;
+    }
+
   }
 
 }
